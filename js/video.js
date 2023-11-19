@@ -10,24 +10,26 @@ window.addEventListener("load", function() {
 });
 // Play the video and update the volume information
 
+
 document.querySelector("#play").addEventListener("click", function() {
 	console.log("Play Video");
 	video.play();
-	// volume.innerHTML = video.volume * 100 + "%";
-	updateVolumeInfo();
+	volume.innerHTML = video.volume * 100 + "%";
+	console.log("The current value is "+ video.volume);
+	// updateVolumeInfo();
 });
 // Function to update volume information
-function updateVolumeInfo() {
-	var volumeSlider = document.getElementById("slider");
-	var volumeInfo = document.getElementById("volume");
+// function updateVolumeInfo() {
+// 	var volumeSlider = document.getElementById("slider");
+// 	var volumeInfo = document.getElementById("volume");
   
-	// Event listener for the volume slider
-	volumeSlider.addEventListener("input", function() {
-	  var volumeValue = volumeSlider.value;
-	  video.volume = volumeValue / 100;
-	  volumeInfo.textContent = volumeValue + "%";
-	});
-  }
+// 	// Event listener for the volume slider
+// 	volumeSlider.addEventListener("input", function() {
+// 	  var volumeValue = volumeSlider.value;
+// 	  video.volume = volumeValue / 100;
+// 	  volumeInfo.textContent = volumeValue + "%";
+// 	});
+//   }
 
 // Pause the video
 document.querySelector("#pause").addEventListener("click", function() {
